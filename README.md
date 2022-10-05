@@ -3,8 +3,4 @@
 
 hi man
 
-this cup is explosiv
-
-hh
-
-jj
+this cup is explosi
