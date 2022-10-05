@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    if: ${{ env.branch == github.event.pull_request.base.ref }}
+    if: env.branch == github.event.pull_request.base.ref
     runs-on: ubuntu-latest
 
     steps:
