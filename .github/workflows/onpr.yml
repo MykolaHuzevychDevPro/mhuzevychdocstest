@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true && ${{ env.development-branch }} == github.event.pull_request.base.ref
+    if: github.event.pull_request.merged == true && ${{ env.development-branch == github.event.pull_request.base.ref }}
     runs-on: ubuntu-latest
 
     steps:
