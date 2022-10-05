@@ -17,4 +17,4 @@ jobs:
         
         - name: "Run dependabot config generator 1"
           if: "${{ env.nextr == env.prb }}"
-          run: echo "${{ env.prb }}"
+          run: echo "${{ github.event.pull_request.base.ref }}"
