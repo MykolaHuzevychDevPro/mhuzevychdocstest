@@ -6,12 +6,16 @@ env:
 on:
   pull_request_target:
     types: [closed]
+    branches: 
+      - ${{ env.branch }}]
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true && ${{ secrets.NEXT_RELEASE == github.event.pull_request.base.ref }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: "Run dependabot config generator"
-        run: echo ${{ env.branch }}
+        - name: "Run dependabot config generator"
+          run: echo ${{ env.branch }}
+        
+        - name: "Run dependabot config generator 1"
+          if: github.event.pull_request.merged == true
+          run: echo ${{ env.branch }}
