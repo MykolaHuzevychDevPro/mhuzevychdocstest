@@ -1,0 +1,17 @@
+name: Update dependabot configuration file
+
+env:
+  branch: "${{ secrets.NEXT_RELEASE }}"
+
+on:
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true && ${{ env.development-branch }} == github.event.pull_request.base.ref
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Run dependabot config generator"
+        run: echo ${{ env.branch }}
