@@ -16,5 +16,5 @@ jobs:
           run: echo "1"
         
         - name: "Run dependabot config generator 1"
-          if: "${{ env.nextr == env.prb }}"
+          if: "${{ env.nextr == env.prb && github.event.pull_request.merged == true }}"
           run: echo "${{ github.event.pull_request.base.ref }}"
