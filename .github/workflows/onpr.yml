@@ -1,7 +1,7 @@
 name: Update dependabot configuration file
 
 env:
-  branch: "${{ secrets.NEXT_RELEASE }}"
+  nextr: "${{ secrets.NEXT_RELEASE }}"
 
 on:
   pull_request_target:
@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: "Run dependabot config generator"
-          run: echo ${{ env.branch }}
+          run: echo "1"
         
         - name: "Run dependabot config generator 1"
-          if: github.event.pull_request.merged == true
-          run: echo ${{ env.branch }}
+          if: "${{ env.nextr == 'github.event.pull_request.base.ref' }}"
+          run: echo 2
