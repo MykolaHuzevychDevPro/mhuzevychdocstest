@@ -3,6 +3,6 @@
 
 hi man
 
-this cup is explosi
+this cup is explosive
 
-
+tututu
