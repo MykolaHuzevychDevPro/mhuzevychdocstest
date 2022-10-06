@@ -1,10 +1,7 @@
 # mhuzevychdocstest
 
 
-hi man
+ohohoho
 
 this cup is explosive
 
-tututu
-
-uuu
