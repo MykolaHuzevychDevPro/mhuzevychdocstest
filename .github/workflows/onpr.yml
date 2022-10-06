@@ -25,5 +25,5 @@ jobs:
           run: echo "success"
           
         - name: "Run dependabot config generator 4"
-          if: steps.check.conclusion == skipped
+          if: steps.check.conclusion == 'skipped'
           run: echo "skipped"
