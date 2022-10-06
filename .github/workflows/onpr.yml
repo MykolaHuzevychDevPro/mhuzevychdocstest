@@ -21,9 +21,9 @@ jobs:
           run: echo "2"
           
         - name: "Run dependabot config generator 3"
-          if: steps.check.conclusion == "success"
+          if: steps.check.conclusion == 'success'
           run: echo "success"
           
         - name: "Run dependabot config generator 4"
-          if: steps.check.conclusion == "skipped"
+          if: steps.check.conclusion == skipped
           run: echo "skipped"
