@@ -2,7 +2,6 @@ name: Update dependabot configuration file
 
 env:
   nextr: "${{ secrets.NEXT_RELEASE }}"
-  prb: "${{ github.event.pull_request.base.ref }}"
 
 on:
   pull_request_target:
@@ -18,7 +17,7 @@ jobs:
         
         - name: "Run dependabot config generator 2"
           id: check
-          if: ${{ env.nextr == 'xxx' }}
+          if: ${{ env.nextr == github.event.pull_request.base.ref }}
           run: echo "2"
           
         - name: "Run dependabot config generator 3"
