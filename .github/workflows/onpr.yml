@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
         - name: "Run dependabot config generator 1"
@@ -17,7 +18,7 @@ jobs:
         
         - name: "Run dependabot config generator 2"
           id: check
-          if: "${{ env.nextr == 'xxx' && github.event.pull_request.merged == true }}"
+          if: ${{ env.nextr == 'xxx' }}
           run: echo "2"
           
         - name: "Run dependabot config generator 3"
