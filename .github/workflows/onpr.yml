@@ -10,11 +10,14 @@ on:
 
 jobs:
   build:
-    if: "${{ env.nextr == github.event.pull_request.base.ref && github.event.pull_request.merged == true }}"
     runs-on: ubuntu-latest
     steps:
-        - name: "Run dependabot config generator"
+        - name: "Run dependabot config generator 1"
           run: echo "1"
         
-        - name: "Run dependabot config generator 1"
-          run: echo "${{ github.event.pull_request.base.ref }}"
+        - name: "Run dependabot config generator 2"
+          if: "${{ env.nextr == 'xxx' && github.event.pull_request.merged == true }}"
+          run: echo "2"
+          
+        - name: "Run dependabot config generator 3"
+          run: echo "3"
