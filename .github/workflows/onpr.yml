@@ -16,8 +16,14 @@ jobs:
           run: echo "1"
         
         - name: "Run dependabot config generator 2"
+          id: check
           if: "${{ env.nextr == 'xxx' && github.event.pull_request.merged == true }}"
           run: echo "2"
           
         - name: "Run dependabot config generator 3"
-          run: echo "3"
+          if: steps.check.conclusion == "success"
+          run: echo "success"
+          
+        - name: "Run dependabot config generator 4"
+          if: steps.check.conclusion == "skipped"
+          run: echo "skipped"
