@@ -9,4 +9,4 @@ updates:
       - ".net"
       - "dependencies"
     target-branch: "rc/2110"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 7
