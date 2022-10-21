@@ -8,5 +8,5 @@ updates:
     labels:
       - ".net"
       - "dependencies"
-    target-branch: "dependabot"
+    target-branch: "rc/2110"
     open-pull-requests-limit: 5
