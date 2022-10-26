@@ -8,5 +8,5 @@ updates:
     labels:
       - ".net"
       - "dependencies"
-    target-branch: "rc/2110"
+    target-branch: {{ secrets.NEXT_RELEASE }}
     open-pull-requests-limit: 7
