@@ -19,7 +19,6 @@ jobs:
     steps:
       - name: Replace rc in file
         run: |
-          echo "ls -a"
           sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',' ${{ env.dbotConfig }}
           
   updateDependabotConfig1:
@@ -27,5 +26,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Replace rc in file
-        run: |
-          echo ls
+        run: ls
