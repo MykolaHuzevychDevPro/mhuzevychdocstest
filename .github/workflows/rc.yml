@@ -10,7 +10,7 @@ on:
         required: true
 
 env:
-  dbotConfig: "/.github/dependabot.yml"
+  dbotConfig: ".github/dependabot.yml"
 
 jobs:
   updateDependabotConfig:
@@ -19,4 +19,12 @@ jobs:
     steps:
       - name: Replace rc in file
         run: |
-          sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',g' ${{ env.dbotConfig }}
+          sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',' ${{ env.dbotConfig }}
+          
+  updateDependabotConfig1:
+    name: Update target branch1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Replace rc in file
+        run: |
+          sed -i -e 's,rc/2110.0,rc/2210.0,' ${{ env.dbotConfig }}
