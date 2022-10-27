@@ -17,6 +17,10 @@ jobs:
     name: Update target branch
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
       - name: Replace rc in file
         run: |
           sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',' ${{ env.dbotConfig }}
@@ -25,6 +29,10 @@ jobs:
     name: Update target branch1
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
       - name: Replace rc in file 3
         run: pwd
       - name: Replace rc in file
