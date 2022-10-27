@@ -25,5 +25,7 @@ jobs:
     name: Update target branch1
     runs-on: ubuntu-latest
     steps:
+      - name: Replace rc in file 3
+        run: pwd
       - name: Replace rc in file
         run: ls -a
