@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Replace rc in file
         run: |
-          ls
+          ls -a
           sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',' ${{ env.dbotConfig }}
           
   updateDependabotConfig1:
@@ -29,4 +29,3 @@ jobs:
       - name: Replace rc in file
         run: |
           ls
-          sed -i -e 's,rc/2110.0,rc/2210.0,' ${{ env.dbotConfig }}
