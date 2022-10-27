@@ -26,4 +26,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Replace rc in file
-        run: ls
+        run: ls -a
