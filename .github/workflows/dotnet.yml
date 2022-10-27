@@ -1,0 +1,22 @@
+name: Create new rc in repositories
+on:
+  workflow_dispatch:
+    inputs:
+      previousRC:
+        description: 'Previous rc branch to be used as base branch'
+        required: true
+      newRC:
+        description: 'A new rc branch to create'
+        required: true
+
+env:
+  dbotConfig: ".github/dependabot.yml"
+
+jobs:
+  updateDependabotConfig:
+    name: Update target branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Replace rc in file
+        run: |
+          sed -i -e 's,'"${{ github.event.inputs.previousRC }}"','"${{ github.event.inputs.newRC }}"',g' ${{ env.dbotConfig }}
