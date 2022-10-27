@@ -8,5 +8,15 @@ updates:
     labels:
       - ".net"
       - "dependencies"
-    target-branch: "{{ secrets.NEXT_RELEASE }}"
+    target-branch: "rc/2110.0"
+    open-pull-requests-limit: 7
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/ABC" # Location of package manifests
+    schedule:
+      interval: "daily"
+      time: "01:00" #UTC
+    labels:
+      - "javascript"
+      - "dependencies"
+    target-branch: "rc/2110.0"
     open-pull-requests-limit: 7
