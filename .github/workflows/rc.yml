@@ -10,7 +10,7 @@ on:
         required: true
 
 env:
-  dbotConfig: ".github/dependabot.yml"
+  dbotConfig: "/.github/dependabot.yml"
 
 jobs:
   updateDependabotConfig:
