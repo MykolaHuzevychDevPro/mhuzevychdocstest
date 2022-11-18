@@ -1,14 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABC", "src\Folder\SomFolder2\ABC\ABC.csproj", "{57A58B8A-FCFC-45FE-9748-5B8519E951F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABC", "core\src\Folder\SomFolder2\ABC\ABC.csproj", "{57A58B8A-FCFC-45FE-9748-5B8519E951F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBA", "src\Folder\SomFolder2\CBA\CBA.csproj", "{96C05CCF-D2BB-4086-A621-521FE0AFDFC0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6411001-A361-4A7C-B0E4-DF7879DFCA61}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ABCF", "ABCF", "{666EA3C0-78FE-4FF5-8676-86F54C0465B5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CBAF", "CBAF", "{D94CBF0C-3F32-426E-85F2-7A44D21C5BE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBA", "core\src\Folder\SomFolder2\CBA\CBA.csproj", "{96C05CCF-D2BB-4086-A621-521FE0AFDFC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
